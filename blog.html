@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 15px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      flex-wrap: wrap;
+    }
+
+    .nav-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .text-primary {
+      color: #FD6E0A;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #474747;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #FD6E0A;
+    }
+
+    main.blog-page {
+      padding: 50px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .blog-card h3 {
+      margin: 15px;
+      color: #333;
+    }
+
+    .blog-card p {
+      margin: 0 15px 20px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+
+      .blog-card img {
+        height: 200px;
+      }
+
+      main.blog-page {
+        padding: 30px 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-title {
+        font-size: 20px;
+      }
+
+      nav ul li a {
+        font-size: 14px;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header small-header">
+    <nav>
+      <h3 class="nav-title">My <span class="text-primary">Blog</span></h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="blog-page">
+    <h2 class="section-title">Latest Posts</h2>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <img src="./images/blog1.jpg" alt="Blog Post 1">
+        <h3>How I Started as a Web Developer</h3>
+        <p>My journey into tech, from HTML basics to full-stack web development.</p>
+      </article>
+
+      <article class="blog-card">
+        <img src="./images/blog2.jpg" alt="Blog Post 2">
+        <h3>Top 5 Tips for Responsive Design</h3>
+        <p>Learn how to make websites that look great on all devices.</p>
+      </article>
+
+      <article class="blog-card">
+        <img src="./images/blog3.jpg" alt="Blog Post 3">
+        <h3>Why Clean Code Matters</h3>
+        <p>Writing clean, maintainable code can make your life so much easier.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Blog | All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>
